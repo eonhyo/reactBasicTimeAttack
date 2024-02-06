@@ -50,7 +50,7 @@ const TodoController = () => {
       // NOTE: sort 메서드를 사용하여 `limit`을 기준으로 오름차순 정렬 후 setTodos로 업데이트
       // HINT: `new Date(todo.limit)`을 사용하여 정렬
       return;
-    }else{   
+    }else if(sortOrder === "desc"){   
       const descendingOrder =  [...todos].sort((a, b)=>{
         return new Date(b.limit) - new Date(a.limit)})
 
